@@ -6,40 +6,44 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        while (true) {
 
-        //Set up utilities
-        Scanner scanner = new Scanner(System.in);
-        HashMap<String, Double> accounts;
+            //Set up utilities
+            Scanner scanner = new Scanner(System.in);
+            HashMap<String, Double> accounts;
 
-        //Declare variables
-        String name;
-        String openNewAccount;
-        Double deposit;
-        Integer transaction;
-        Double balance;
-        Double withdraw;
-        Double newBalance;
-        boolean run = true;
+            //Declare variables
+            String name;
+            String openNewAccount;
+            Double deposit;
+            Integer transaction;
+            Double balance;
+            Double withdraw;
+            Double newBalance;
+            boolean run = true;
 
 
-        //Instantiate Class Objects
-        accounts = new HashMap<>();
-        deposit = new Double(0.0);
-        transaction = new Integer(0);
-        balance = new Double(0.0);
-        withdraw = new Double(0.0);
-        newBalance = new Double(0.0);
+            //Instantiate Class Objects
+            name = new String();
+            accounts = new HashMap<>();
+            deposit = new Double(0.0);
+            transaction = new Integer(0);
+            balance = new Double(0.0);
+            withdraw = new Double(0.0);
+            newBalance = new Double(0.0);
 
-        //create HashMap enteries
-        accounts.put("Abigail", 575.12);
-        accounts.put("Isabel", 12873.93);
-        accounts.put("Doug", 25.32);
+            //create HashMap enteries
+            accounts.put("Abigail", 575.12);
+            accounts.put("Isabel", 12873.93);
+            accounts.put("Doug", 25.32);
 
-        while (run == true) {
-            //Collect name
+
             System.out.println("Welcome.");
+
+            //Collect name
             System.out.println("Please enter your name.");
             name = scanner.nextLine();
+
 
             //name in Hashmap?
             while (accounts.containsKey(name) == false) {
